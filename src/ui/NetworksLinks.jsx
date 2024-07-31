@@ -1,7 +1,14 @@
 import styled, { css } from "styled-components";
+import PropType from "prop-types";
+
 import Button from "./Button";
 import Img from "./Img";
-import PropType from "prop-types";
+
+import wifi from "../../../public/wifi.png";
+import facebook from "../../../public/facebook.svg";
+import instagram from "../../../public/instagram.svg";
+import twitter from "../../../public/twitter.svg";
+import email from "../../../public/mail.svg";
 
 const FlexNets = styled.div`
   ${(props) => {
@@ -38,19 +45,19 @@ function NetworksLinks({ mode }) {
   return (
     <FlexNets $mode={mode}>
       <Button type="image">
-        <Img src="../../../public/wifi.png" alt="network" />
+        <Img src={wifi} alt="network" />
       </Button>
       <Button type="image">
-        <Img src="../../../public/facebook.svg" alt="facebook" />
+        <Img src={facebook} alt="facebook" />
       </Button>
       <Button type="image">
-        <Img src="../../../public/instagram.svg" alt="instagram" />
+        <Img src={instagram} alt="instagram" />
       </Button>
       <Button type="image">
-        <Img src="../../../public/twitter.svg" alt="twitter" />
+        <Img src={twitter} alt="twitter" />
       </Button>
       <Button type="image">
-        <Img src="../../../public/mail.svg" alt="email" />
+        <Img src={email} alt="email" />
       </Button>
     </FlexNets>
   );

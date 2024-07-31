@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
+import picture1 from "../public/picture-1.png";
+import picture2 from "../public/picture-2.png";
+import picture3 from "../public/picture-3.png";
+
 const StyledAboutMe = styled.section`
   display: grid;
   grid-template-columns: 10% 35% 10% 35% 10%;
@@ -152,9 +156,9 @@ function AboutMe() {
       </AboutMeText>
 
       <Pictures>
-        <ImgOne src="../public/picture-1.png" alt="Blogger's photo one" />
-        <ImgTwo src="../public/picture-3.png" alt="Blogger's photo two" />
-        <ImgThree src="../public/picture-2.png" alt="Blogger's photo three" />
+        <ImgOne src={picture1} alt="Blogger's photo one" />
+        <ImgTwo src={picture3} alt="Blogger's photo two" />
+        <ImgThree src={picture2} alt="Blogger's photo three" />
       </Pictures>
     </StyledAboutMe>
   );

@@ -1,6 +1,12 @@
 import styled from "styled-components";
+
 import Button from "../ui/Button";
 import ItemsTagAndDate from "../ui/ItemsTagAndDate";
+
+import post1 from "../../public/posts-1.png";
+import post2 from "../../public/posts-2.png";
+import post3 from "../../public/posts-3.png";
+import post4 from "../../public/posts-4.png";
 
 const StyledBlogPosts = styled.section`
   display: grid;
@@ -121,25 +127,25 @@ function BlogPosts() {
       </BlogPostsHeader>
 
       <PostOne>
-        <img src="../../public/posts-1.png" alt="blog picture 1" />
+        <img src={post1} alt="blog picture 1" />
         <ItemsTagAndDate tag="fashion" date="4 Dec 2023" />
         <a href="/blog">12 Style essentials that make it easy to get dressed</a>
       </PostOne>
 
       <PostTwo>
-        <img src="../../public/posts-2.png" alt="blog picture 2" />
+        <img src={post2} alt="blog picture 2" />
         <ItemsTagAndDate tag="fashion" date="1 Dec 2023" />
         <a href="/blog">The Key Spring/Summer 2024 Trends To Know Now</a>
       </PostTwo>
 
       <PostThree>
-        <img src="../../public/posts-3.png" alt="blog picture 3" />
+        <img src={post3} alt="blog picture 3" />
         <ItemsTagAndDate tag="lifestyle" date="26 Nov 2023" />
         <a href="/blog">A Woman&apos;s lifestyle journal</a>
       </PostThree>
 
       <PostFour>
-        <img src="../../public/posts-4.png" alt="blog picture 4" />
+        <img src={post4} alt="blog picture 4" />
         <ItemsTagAndDate tag="beauty" date="21 Nov 2023" />
         <a href="/blog">Unveiling Beauty Secrets</a>
       </PostFour>
