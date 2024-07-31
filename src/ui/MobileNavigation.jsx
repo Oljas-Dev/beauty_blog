@@ -1,13 +1,15 @@
 import styled, { css } from "styled-components";
 import { useSearchedArticles } from "../services/SearchedArticlesContext";
 import { useNavigate } from "react-router-dom";
+import { useEffect, useRef, useState } from "react";
 
 import NavLinks from "./NavLinks";
 import BlogNavigation from "./BlogNavigation";
-import { useEffect, useRef, useState } from "react";
 import { StyledSearchInput } from "./InputSearch";
 import { Underline } from "../styles/variables/Variables";
 import NetworksLinks from "./NetworksLinks";
+
+import LogoPicture from "../../public/logo.png";
 
 const StyledMobiNav = styled.div`
   display: none;
@@ -151,7 +153,7 @@ function MobileNavigation() {
     <Content>
       <Container>
         <a href="/homepage">
-          <img src="../../public/logo.png" alt="logo" height={16} width={228} />
+          <img src={LogoPicture} alt="logo" height={16} width={228} />
         </a>
         <NavLinks onShowSearch={handleInput} />
 
