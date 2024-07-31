@@ -4,11 +4,11 @@ import PropType from "prop-types";
 import Button from "./Button";
 import Img from "./Img";
 
-import wifi from "../../../public/wifi.png";
-import facebook from "../../../public/facebook.svg";
-import instagram from "../../../public/instagram.svg";
-import twitter from "../../../public/twitter.svg";
-import email from "../../../public/mail.svg";
+import wifi from "../../public/wifi.png";
+import facebook from "../../public/facebook.svg";
+import instagram from "../../public/instagram.svg";
+import twitter from "../../public/twitter.svg";
+import email from "../../public/mail.svg";
 
 const FlexNets = styled.div`
   ${(props) => {

@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
-import picture1 from "../public/picture-1.png";
-import picture2 from "../public/picture-2.png";
-import picture3 from "../public/picture-3.png";
+import picture1 from "../../public/picture-1.png";
+import picture2 from "../../public/picture-2.png";
+import picture3 from "../../public/picture-3.png";
 
 const StyledAboutMe = styled.section`
   display: grid;
