@@ -10,6 +10,7 @@ const StyledResults = styled.div`
   color: var(--color-black-32);
 
   margin-top: 9rem;
+  padding: 3rem 0;
 `;
 
 function NoSearchResults() {

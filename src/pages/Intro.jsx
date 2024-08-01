@@ -2,27 +2,27 @@ import styled from "styled-components";
 
 import Button from "../ui/Button";
 
-const StyledIntro = styled.div`
-  height: 100dvh;
-  background-image: url(../../public/intro.png);
-  background-size: cover;
-  background-repeat: no-repeat;
+// const StyledIntro = styled.div`
+//   height: 100dvh;
+//   background-image: url(../../public/intro.png);
+//   background-size: cover;
+//   background-repeat: no-repeat;
 
-  display: grid;
-  grid-template-columns: 10% 60% 30%;
-  justify-content: center;
-  align-items: center;
+//   display: grid;
+//   grid-template-columns: 10% 60% 30%;
+//   justify-content: center;
+//   align-items: center;
 
-  @media only screen and (max-width: 50em) {
-    background-position: bottom;
-  }
-  @media only screen and (max-width: 37.5em) {
-    grid-template-columns: 5% 65% 30%;
-  }
-  @media only screen and (max-width: 31.25em) {
-    grid-template-columns: 5% 80% 15%;
-  }
-`;
+//   @media only screen and (max-width: 50em) {
+//     background-position: bottom;
+//   }
+//   @media only screen and (max-width: 37.5em) {
+//     grid-template-columns: 5% 65% 30%;
+//   }
+//   @media only screen and (max-width: 31.25em) {
+//     grid-template-columns: 5% 80% 15%;
+//   }
+// `;
 
 const Intorduction = styled.div`
   grid-column-start: 2;
@@ -55,7 +55,7 @@ const Intorduction = styled.div`
 
 function Intro() {
   return (
-    <StyledIntro>
+    <div className="intro">
       <Intorduction>
         <h1>Elevate Life with Style.</h1>
         <p>
@@ -66,7 +66,7 @@ function Intro() {
           <a href="/blog">Read Blog</a>
         </Button>
       </Intorduction>
-    </StyledIntro>
+    </div>
   );
 }
 

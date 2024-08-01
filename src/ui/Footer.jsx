@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import { useNavigate } from "react-router-dom";
+import { useSearchedArticles } from "../services/SearchedArticlesContext";
 
 import Button from "./Button";
 import Img from "./Img";
@@ -6,8 +8,9 @@ import Subscription from "./Subscription";
 import BlogNavigation from "./BlogNavigation";
 import InputAndLabel from "./InputAndLabel";
 import { Underline } from "../styles/variables/Variables";
-import { useSearchedArticles } from "../services/SearchedArticlesContext";
-import { useNavigate } from "react-router-dom";
+
+import footerLogo from "../../public/footer-logo.png";
+import searchPic from "../../public/search.svg";
 
 const StyledFooter = styled.section`
   display: grid;
@@ -166,7 +169,7 @@ function Footer() {
     <StyledFooter>
       <MobileUnderline />
       <StyledSubscription>
-        <img src="../../public/footer-logo.png" alt="Logo" width="220px" />
+        <img src={footerLogo} alt="Logo" width="220px" />
         <StyledParagraph>
           Get inspired! Receive discounts, tips and behind the scenes stories.
         </StyledParagraph>
@@ -188,7 +191,7 @@ function Footer() {
             navigate("search");
           }}
         >
-          <Img src="../../../public/search.svg" />
+          <Img src={searchPic} />
         </Button>
       </InputContainer>
 
