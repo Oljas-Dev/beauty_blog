@@ -147,4 +147,4 @@ const Button = styled.button`
   ${(props) => hovers[props.hover]}
 `;
 
-export default Button;
+export { Button };

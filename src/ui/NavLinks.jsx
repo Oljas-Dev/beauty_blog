@@ -1,10 +1,12 @@
 import styled from "styled-components";
 import PropType from "prop-types";
 
-import Button from "./Button";
+import { Button } from "./Button";
 import Img from "./Img";
 import BlogNavigation from "./BlogNavigation";
 import NetworksLinks from "./NetworksLinks";
+
+import magnifier from "../../public/search.svg";
 
 const FlexBlock = styled.div`
   display: flex;
@@ -42,7 +44,7 @@ function NavLinks({ onShowSearch }) {
       <Divider />
 
       <Button type="image" onClick={onShowSearch}>
-        <Img src="../../../public/search.svg" />
+        <Img src={magnifier} />
       </Button>
     </FlexBlock>
   );

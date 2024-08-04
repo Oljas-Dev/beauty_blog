@@ -26,6 +26,40 @@ export const StyledSearchInput = styled.input`
             transform: rotate(-135deg);
           }
         `;
+
+      case "footer":
+        return css`
+          font-size: 1.5rem;
+          font-weight: 200;
+          border: none;
+          background-color: transparent;
+          position: relative;
+
+          padding: 4px 1.6rem;
+          min-width: 30rem;
+
+          border-bottom: 1px solid var(--color-black);
+
+          align-self: start;
+          transition: all 1s;
+
+          @media only screen and (max-width: 80em) {
+            min-width: 20rem;
+          }
+
+          &:active,
+          &:focus {
+            border-bottom: none;
+            border: 1px solid var(--color-black);
+          }
+
+          &:placeholder-shown + label {
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-3rem);
+          }
+        `;
+
       default:
         return css`
           background-color: transparent;

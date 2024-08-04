@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Button from "./Button";
+import { Button } from "./Button";
 import { useSearchParams } from "react-router-dom";
 
 const StyledBlogNav = styled.div`

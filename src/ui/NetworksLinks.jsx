@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 import PropType from "prop-types";
 
-import Button from "./Button";
+import { Button } from "./Button";
 import Img from "./Img";
 
 import wifi from "../../public/wifi.png";

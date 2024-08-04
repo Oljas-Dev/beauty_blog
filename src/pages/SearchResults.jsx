@@ -1,11 +1,11 @@
 import styled from "styled-components";
 import PropTypes from "prop-types";
 import { useSearched } from "../services/useSearched";
+import { Link } from "react-router-dom";
 
 import SearchLoader from "../ui/SearchLoader";
 import { SubContainer } from "../styles/variables/Variables";
 import NoSearchResults from "./NoSearchResults";
-import { Link } from "react-router-dom";
 import ItemsTagAndDate from "../ui/ItemsTagAndDate";
 
 const StyledSearchResults = styled.div`

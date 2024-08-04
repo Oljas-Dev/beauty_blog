@@ -2,7 +2,6 @@ import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
 import { useSearchedArticles } from "../services/SearchedArticlesContext";
 
-import Button from "./Button";
 import Img from "./Img";
 import Subscription from "./Subscription";
 import BlogNavigation from "./BlogNavigation";
@@ -11,6 +10,7 @@ import { Underline } from "../styles/variables/Variables";
 
 import footerLogo from "../../public/footer-logo.png";
 import searchPic from "../../public/search.svg";
+import { StyledSearchInput } from "./InputSearch";
 
 const StyledFooter = styled.section`
   display: grid;
@@ -83,37 +83,6 @@ const InputContainer = styled.div`
   }
 `;
 
-const StyledInput = styled.input`
-  font-size: 1.5rem;
-  font-weight: 200;
-  border: none;
-  background-color: transparent;
-
-  padding: 4px 1.6rem;
-  min-width: 30rem;
-
-  border-bottom: 1px solid var(--color-black);
-
-  align-self: start;
-  transition: all 1s;
-
-  @media only screen and (max-width: 80em) {
-    min-width: 20rem;
-  }
-
-  &:active,
-  &:focus {
-    border-bottom: none;
-    border: 1px solid var(--color-black);
-  }
-
-  &:placeholder-shown + label {
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(-3rem);
-  }
-`;
-
 const Copyrights = styled.div`
   grid-column: 2 / -3;
   grid-row-start: 3;
@@ -160,8 +129,15 @@ const MobileUnderline = styled.div`
   }
 `;
 
+const Span = styled.span`
+  position: absolute;
+  top: 0.3rem;
+  right: 1rem;
+  cursor: pointer;
+`;
+
 function Footer() {
-  const { handleSearcheQuery } = useSearchedArticles();
+  const { handleSearchQuery } = useSearchedArticles();
 
   const navigate = useNavigate();
 
@@ -181,18 +157,21 @@ function Footer() {
 
       <InputContainer>
         <InputAndLabel>
-          <StyledInput type="search" placeholder="type here" />
+          <StyledSearchInput
+            $mode="footer"
+            type="search"
+            placeholder="type here"
+            onChange={(e) => {
+              // console.log(e.target.value);
+              handleSearchQuery(e.target.value);
+              navigate("search");
+            }}
+          />
           <label>type here</label>
+          <Span>
+            <Img src={searchPic} />
+          </Span>
         </InputAndLabel>
-        <Button
-          type="search"
-          onChange={(e) => {
-            handleSearcheQuery(e.target.value);
-            navigate("search");
-          }}
-        >
-          <Img src={searchPic} />
-        </Button>
       </InputContainer>
 
       <Subscription />
